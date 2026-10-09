@@ -1,0 +1,83 @@
+{
+  "name": "discord-presence",
+  "version": "0.7.0",
+  "description": "Unofficial: shows what Claude Code is doing as your Discord Rich Presence, and notifies you in Discord when a task finishes or needs you.",
+  "author": {
+    "name": "skyfox"
+  },
+  "license": "MIT",
+  "keywords": [
+    "discord",
+    "rich-presence",
+    "notifications",
+    "status"
+  ],
+  "userConfig": {
+    "clientId": {
+      "type": "string",
+      "title": "Discord Application ID",
+      "description": "Application ID from discord.com/developers/applications; its name is what Discord shows as \"Playing ...\".",
+      "default": "1557999857648803900"
+    },
+    "largeImage": {
+      "type": "string",
+      "title": "Large image",
+      "description": "An art asset key uploaded to the application, or an https:// image URL. Empty: no image.",
+      "default": "https://cdn.discordapp.com/app-icons/1557999857648803900/12d2e156b485572286a481353735d288.png?size=512"
+    },
+    "showProject": {
+      "type": "boolean",
+      "title": "Show project name",
+      "description": "Show the working folder's name in the status.",
+      "default": true
+    },
+    "showFile": {
+      "type": "boolean",
+      "title": "Show file names",
+      "description": "Show the name of the file being read or edited. Everyone who sees your profile sees it too.",
+      "default": false
+    },
+    "showCost": {
+      "type": "boolean",
+      "title": "Show cost",
+      "description": "Show how many dollars the session has spent so far.",
+      "default": true
+    },
+    "showStats": {
+      "type": "boolean",
+      "title": "Show session stats",
+      "description": "The context bar ▰▰▱▱▱, a countdown to the 5-hour limit's reset when it is nearly used up, and prompts, files, commands on hover.",
+      "default": true
+    },
+    "stateIcons": {
+      "type": "boolean",
+      "title": "State icons",
+      "description": "Show a small idle / thinking / working icon; needs art assets with those keys uploaded to the Discord application.",
+      "default": true
+    },
+    "afkMinutes": {
+      "type": "number",
+      "title": "Away after (minutes)",
+      "description": "After this many minutes without a prompt, the status shows \"💤 Away\" and for how long. 0 turns it off.",
+      "default": 15
+    },
+    "webhookUrl": {
+      "type": "string",
+      "title": "Discord webhook URL",
+      "description": "A channel's webhook, for the history of notifications (Server Settings → Integrations → Webhooks). Direct messages come from the application's bot, whose token is kept in ~/.claude/discord-presence/bot-token.txt.",
+      "default": ""
+    },
+    "tagInChannel": {
+      "type": "boolean",
+      "title": "Tag me in the channel",
+      "description": "Lead each channel message with your Discord tag, so a shared channel shows whose it is. It never pings.",
+      "default": false
+    },
+    "notifyAfterSeconds": {
+      "type": "number",
+      "title": "Announce tasks that ran at least (seconds)",
+      "description": "A finished task is announced only when it ran at least this long. Questions, permission requests and errors are always announced.",
+      "default": 60
+    }
+  }
+}

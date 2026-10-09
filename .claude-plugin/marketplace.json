@@ -1,0 +1,14 @@
+{
+  "name": "discord-presence-for-claude-code",
+  "description": "Discord Rich Presence and notifications for Claude Code (unofficial).",
+  "owner": {
+    "name": "skyfox"
+  },
+  "plugins": [
+    {
+      "name": "discord-presence",
+      "source": "./",
+      "description": "Unofficial: shows what Claude Code is doing as your Discord Rich Presence, and notifies you in Discord when a task finishes or needs you."
+    }
+  ]
+}
